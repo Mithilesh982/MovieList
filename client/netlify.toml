@@ -1,0 +1,11 @@
+[build]
+  base = "client"  # Set the base directory to your client app
+  command = "npm run build"  # The build command to run
+  publish = "client/build"  # The directory where the built files are located
+
+[functions]
+  directory = "netlify/functions"  # Specify the directory where your Netlify functions are located
+
+[context.production.environment]
+  NODE_ENV = "production"
+  REACT_APP_API_KEY = "your-api-key"  # Replace with your actual API key
